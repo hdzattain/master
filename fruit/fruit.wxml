@@ -1,0 +1,27 @@
+<!--pages/fruit.wxml-->
+<text>-----------------水果种类-------------------</text>
+<view class="container">      
+    <view class="th">    
+      <text space="emsp">水果名称 剩余数量 单价 购买数量</text> 
+    </view>            
+    <view class="tr" wx:for="{{fruitslist}}" wx:key="index">        
+      <view class="td">
+         　{{item.name}}　　　{{item.number}}　　　{{item.price}}　　
+        <button size="mini" bindtap="decrease" 
+            data-buynum="{{item.buynbr}}"
+            data-index="{{index}}">-</button>
+        　{{item.buynbr}}
+        <button size="mini" bindtap="increase" 
+           data-buynum="{{item.buynbr}}"
+           data-index="{{index}}">+</button>
+      </view>          
+    </view>  
+    <view>共计：{{sum}}元</view>
+    <view wx:if="{{sum>0}}">
+      <button size="mini"  bindtap="handlePushBtn"
+        data-total="{{sum}}">确定</button>
+    </view>
+  <view wx:else>
+    <button size="mini" disabled="true" bindtap="BtnClicked">确定</button>
+  </view>
+</view>
