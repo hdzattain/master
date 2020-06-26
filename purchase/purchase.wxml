@@ -1,0 +1,7 @@
+<!--pages/purchase/purchase.wxml-->
+
+<text>需要支付：</text>
+
+<view>{{fruitprice}}</view>
+
+<text>支付成功!</text>
