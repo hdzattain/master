@@ -1,6 +1,6 @@
 
 //注册一个界面
-// pages/fruit.js
+// fruit/fruit.js
 Page({
 
   /**
