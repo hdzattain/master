@@ -18,7 +18,7 @@ Page({
       var dataset = event.currentTarget.dataset;
       var sum = dataset.total;
       wx.navigateTo({
-        url: '/pages/Purchase/Purchase',
+        url: '/master/fruit/fruit',
         events: {
           // 获取传送数据
           acceptDataFromOpenedPage: function(data) {
@@ -38,7 +38,7 @@ Page({
     let fruitslist = this.data.fruitslist;    
     let num = fruitslist[index].buynbr; 
     if(num == 0){      
-      wx.showToast({title: '不能再减了~',icon:'none'})      
+      wx.showToast({title: '没有了',icon:'none'})      
       return ;   
     }     
     num = num - 1; 
@@ -55,7 +55,7 @@ Page({
     let fruitslist = this.data.fruitslist;    
     let num = fruitslist[index].buynbr;   
     if(fruitslist[index].number == 0){      
-      wx.showToast({title: '不能再加了~',icon:'none'})      
+      wx.showToast({title: '到达上限',icon:'none'})      
       return ;   
     } 
     num = num + 1;    
