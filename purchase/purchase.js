@@ -1,4 +1,4 @@
-// pages/Purchase/Purchase.js
+// ../purchase/purchase.js
   Page({
     data:{
       fruitprice:0,
